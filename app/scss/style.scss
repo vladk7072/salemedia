@@ -31,6 +31,14 @@
     display: flex;
     justify-content: space-between;
   }
+  &__menu-item {
+    position: relative;
+    &:hover {
+      .sub-menu {
+        display: block;
+      }
+    }
+  }
   &__menu-item > a {
     font-size: 12px;
     line-height: 14px;
@@ -51,6 +59,52 @@
     @extend %ari-700;
     text-transform: uppercase;
     color: #cc4391;
+    transition: all 0.2s;
+    &:hover {
+      color: #99326d;
+    }
+  }
+  .sub-menu {
+    // display: none;
+    position: absolute;
+    top: 44px;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    background: #ffffff;
+    border-radius: 0px 0px 15px 15px;
+    li {
+      font-size: 12px;
+      line-height: 14px;
+      @extend %ari-700;
+      text-transform: uppercase;
+      position: relative;
+      a {
+        width: 100%;
+        display: inline-block;
+        color: #000;
+        padding: 15px;
+        border-top: 1px solid #e1e1e1;
+        transition: all 0.2s;
+        &:hover {
+          color: #cc4391;
+
+        }
+      }
+    }
+    li > ul {
+      position: absolute;
+      top: 0;
+      right: -156px;
+      background: #fff;
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+      border-radius: 0px 15px 15px 15px;
+    }
+    a:hover {
+      ul > li > ul {
+        display: block;
+      }
+    }
   }
 }
 .top-slider {
@@ -123,6 +177,9 @@
     &:hover {
       background-color: #b23b7f;
     }
+    &:focus {
+      outline: transparent;
+    }
   }
   &__arrows {
     position: absolute;
@@ -148,6 +205,9 @@
       top: 50%;
       transform: translateY(-50%);
       left: calc(50% - 4px);
+    }
+    &:focus {
+      outline: transparent;
     }
   }
   &__arrow-prev {
@@ -250,6 +310,10 @@
     position: relative;
     &:hover {
       border: 2px solid #cc4391;
+      // .services__item-link {
+      //   background-color: #99326d;
+      //   color: #fff;
+      // }
     }
   }
   &__toppromo {
@@ -260,7 +324,7 @@
     transform: translateX(-50%);
     font-size: 12px;
     line-height: 15px;
-    @extend %mon-700;
+    @extend %ari-700;
     color: #cc4391;
     background: #fff;
     border-radius: 0px 0px 10px 10px;
@@ -308,6 +372,11 @@
     background: #fff;
     border-radius: 20px;
     margin: 0 40px 40px;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #99326d;
+      color: #fff;
+    }
   }
   &__promo {
     position: absolute;
@@ -317,7 +386,7 @@
     padding: 9px 10px;
     font-size: 12px;
     line-height: 15px;
-    @extend %mon-700;
+    @extend %ari-700;
     text-transform: uppercase;
     color: #fff;
     background: #cc4391;
@@ -330,7 +399,7 @@
     margin-top: -17px;
     font-size: 12px;
     line-height: 15px;
-    @extend %mon-700;
+    @extend %ari-700;
     color: #cc4391;
     padding: 8px 10px;
     border: 1px solid #cc4391;
@@ -511,6 +580,11 @@
     background: #ffffff;
     border-radius: 20px;
     border: 1px solid #cc4391;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #99326d;
+      color: #fff;
+    }
   }
   &__item:last-child {
     grid-column: span 2;
@@ -537,7 +611,7 @@
       left: 30px;
       font-size: 64px;
       line-height: 78px;
-      @extend %mon-400;
+      @extend %ari-400;
       color: #cc4391;
     }
   }
@@ -722,6 +796,75 @@
     background: #ffffff;
     border-radius: 15px;
     text-align: center;
+    transition: all 0.2s;
+    &:hover {
+      background-color: #99326d;
+      color: #fff;
+    }
+  }
+}
+.footer {
+  background-color: #040b16;
+  padding: 30px 0 136px;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__logo-img {
+    height: 40px;
+    margin-bottom: 30px;
+    max-width: 195px;
+    width: 100%;
+  }
+  &__copy {
+    font-size: 14px;
+    line-height: 18px;
+    @extend %ari-400;
+    color: #fff;
+    max-width: 155px;
+    width: 100%;
+  }
+  &__item-title {
+    font-size: 14px;
+    line-height: 20px;
+    @extend %ari-400;
+    color: #fff;
+    margin-bottom: 15px;
+  }
+  &__list-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 245px));
+    grid-gap: 55px;
+  }
+  &__list-box {
+    a {
+      display: inline-block;
+      font-size: 12px;
+      line-height: 28px;
+      @extend %ari-400;
+      color: #ef5da8;
+    }
+  }
+  &__socials-box {
+    display: flex;
+    justify-content: flex-end;
+  }
+  &__social-link {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #30343a;
+    border-radius: 50%;
+    & + .footer__social-link {
+      margin-left: 10px;
+    }
+  }
+  &__social-link-img {
+    width: 21px;
+    height: 21px;
   }
 }
 

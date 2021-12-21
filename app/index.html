@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Sale Media</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
@@ -27,6 +28,40 @@
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="#">корпоративные сайты</a>
+              <!-- <ul class="sub-menu">
+                <li>
+                  <a href="#">E-commerce</a>
+                </li>
+                <li>
+                  <a href="#">аналитика</a>
+                </li>
+                <li>
+                  <a href="#">аналитика</a>
+                </li>
+                <li>
+                  <a href="#">социальные сети</a>
+                </li>
+                <li>
+                  <a href="#">аналитика</a>
+                  <ul class="sub-menu-2">
+                    <li>
+                      <a href="#">E-commerce</a>
+                    </li>
+                    <li>
+                      <a href="#">аналитика</a>
+                    </li>
+                    <li>
+                      <a href="#">аналитика</a>
+                    </li>
+                    <li>
+                      <a href="#">социальные сети</a>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a href="#">социальные сети</a>
+                </li>
+              </ul> -->
             </li>
             <li class="header__menu-item">
               <a class="header__menu-link" href="#">E-commerce</a>
@@ -71,7 +106,7 @@
                 Учтём особенности построения <span>бизнес-процессов</span> вашей компании
               </p>
             </div>
-            <a class="top-slider__link" href="#">
+            <a class="top-slider__link" data-fancybox href="#sendPopup">
               заказать САЙТ
             </a>
           </div>
@@ -90,7 +125,7 @@
                 Учтём особенности построения <span>бизнес-процессов</span> вашей компании
               </p>
             </div>
-            <a class="top-slider__link" href="#">
+            <a class="top-slider__link" data-fancybox href="#sendPopup">
               заказать САЙТ
             </a>
           </div>
@@ -109,7 +144,7 @@
                 Учтём особенности построения <span>бизнес-процессов</span> вашей компании
               </p>
             </div>
-            <a class="top-slider__link" href="#">
+            <a class="top-slider__link" data-fancybox href="#sendPopup">
               заказать САЙТ
             </a>
           </div>
@@ -128,7 +163,7 @@
                 Учтём особенности построения <span>бизнес-процессов</span> вашей компании
               </p>
             </div>
-            <a class="top-slider__link" href="#">
+            <a class="top-slider__link" data-fancybox href="#sendPopup">
               заказать САЙТ
             </a>
           </div>
@@ -147,7 +182,7 @@
                 Учтём особенности построения <span>бизнес-процессов</span> вашей компании
               </p>
             </div>
-            <a class="top-slider__link" href="#">
+            <a class="top-slider__link" data-fancybox href="#sendPopup">
               заказать САЙТ
             </a>
           </div>
@@ -637,9 +672,9 @@
           <div class="cities__box">
             <div class="cities__box-item">
               <h6 class="cities__box-title">Адрес</h6>
-              <p class="cities__box-text">
+              <a class="cities__box-text" href="#">
                 Россия, г. Москва, ул. Ильинка, дом 23/16, подъезд 11
-              </p>
+              </a>
             </div>
             <div class="cities__box-item">
               <h6 class="cities__box-title">Телефон</h6>
@@ -696,7 +731,7 @@
             <img src="images/questions/3.png" alt="">
           </a>
         </div>
-        <a class="questions__btn" href="#">НАПИСАТЬ</a>
+        <a class="questions__btn" data-fancybox href="#quePopup">НАПИСАТЬ</a>
       </div>
     </div>
   </section>
@@ -710,14 +745,115 @@
               <use xlink:href="images/sprite.svg#footer-logo"></use>
             </svg>
           </a>
+          <p class="footer__copy">
+            ©2021 Sale Media LLC.
+            Все права защищены.
+          </p>
+        </div>
+        <div class="footer__item">
+          <h4 class="footer__item-title">Интересно почитать:</h4>
+          <div class="footer__list-wrapper">
+            <div class="footer__list-box">
+              <a href="#">Как повысить конверсию</a>
+              <a href="#">20 способовов привлечь клиента</a>
+              <a href="#">9 инструментовки в для повышения продаж</a>
+            </div>
+            <div class="footer__list-box">
+              <a href="#">9 инструментовки в для повышения продаж</a>
+              <a href="#">Как повысить конверсию</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer__item">
+          <h4 class="footer__item-title">Мы в социальных сетях:</h4>
+          <div class="footer__socials-box">
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-link-img">
+                <use xlink:href="images/sprite.svg#facebook-icon"></use>
+              </svg>
+            </a>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-link-img">
+                <use xlink:href="images/sprite.svg#vk-icon"></use>
+              </svg>
+            </a>
+            <a class="footer__social-link" href="#">
+              <svg class="footer__social-link-img">
+                <use xlink:href="images/sprite.svg#twitter-icon"></use>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </div>
   </footer>
 
+  <div class="fixed-banner">
+    <div class="_container">
+      <div class="fixed-banner__wrapper">
+        <h4 class="fixed-banner__title">
+          Почему не стоит откладывать <span>создание сайта</span>?
+        </h4>
+        <p class="fixed-banner__text">
+          <b><i>Но мы знаем, что раз вы здесь, то вам уже нужен сайт.</i></b> Поэтому не теряйте время! Пока вы
+          раздумываете, ваши клиенты уходят к конкурентам.
+        </p>
+        <a class="fixed-banner__link" href="#">заказать САЙТ</a>
+      </div>
+    </div>
+    <div class="fixed-banner__close">
+      <svg class="fixed-banner__close-img">
+        <use xlink:href="images/sprite.svg#close-btn"></use>
+      </svg>
+    </div>
+  </div>
+
+  <div class="quePopup" id="quePopup" style="display: none;">
+    <h4 class="quePopup__title">
+      Напишите нам и мы обязательно <span>поможем</span> вам!
+    </h4>
+    <div class="quePopup__box">
+      <a class="quePopup__link" style="background-image: url(../images/quePopup/1.png);" href="#">Написать в
+        <i><b>Telegram</b></i></a>
+      <a class="quePopup__link" style="background-image: url(../images/quePopup/2.png);" href="#">Написать в
+        <i><b>WhatsApp</b></i></a>
+      <a class="quePopup__link" style="background-image: url(../images/quePopup/3.png);" href="#">Написать в
+        <i><b>Viber</b></i></a>
+    </div>
+
+  </div>
+
+  <div class="sendPopup" id="sendPopup" style="display: none;">
+    <h4 class="sendPopup__title">
+      <span>Куда</span> отправить портфолио?
+    </h4>
+    <form class="sendPopup__form" action="#">
+      <div class="sendPopup__social-btns">
+        <div class="sendPopup__social-btn">
+          <img class="sendPopup__img" src="images/questions/1.png" alt="">
+          Telegram
+        </div>
+        <div class="sendPopup__social-btn sendPopup__social-btn--active">
+          <img class="sendPopup__img" src="images/questions/3.png" alt="">
+          Whatsapp
+        </div>
+        <div class="sendPopup__social-btn">
+          <img class="sendPopup__img" src="images/questions/2.png" alt="">
+          Viber
+        </div>
+      </div>
+      <h5 class="sendPopup__subtitle">
+        Укажите имя аккаунта или номер телефона
+      </h5>
+      <input class="sendPopup__input" type="text" placeholder="имя аккаунта или номер телефона">
+      <button class="sendPopup__button" type="submit">ЗАПРОСИТЬ</button>
+    </form>
+  </div>
 
 
 
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 
